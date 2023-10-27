@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 1</title>
+</head>
+<body>
+    <p>Afficher une table de multiplication à partir d’un nombre saisi au clavier, afficher sa table de 
+        multiplication (les 10 premiers nombres)</p>
+    <script>
+        var m = prompt("enter un nombre n : ");
+
+        console.log(m);
+
+        for(let i=1;i<=10;i++){
+            document.writeln(`${m} x ${i} = ${+m*i}`);
+            document.writeln("<br>");
+        }
+    </script>
+</body>
+</html>

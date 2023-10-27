@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 2</title>
+</head>
+<body>
+    <p>Ecrire le code d'un fichier HTML permettant de calculer et d'afficher le carré d'un nombre saisi 
+        au clavier</p>
+    <input class="multiplication" type="number">
+    <button class="pow">calculer le care</button>
+    <script>
+        const n = document.querySelector(".multiplication"),
+        btn_care = document.querySelector(".pow");
+
+        btn_care.onclick = ()=>{
+            window.alert(Math.pow(n.value,2))
+        }
+    </script>
+</body>
+</html>

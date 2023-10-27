@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 4</title>
+</head>
+<body>
+    <p>Ecrire le code d'un fichier HTML qui permet de saisir le numéro du mois et l’année puis affiche 
+        le nombre de jours.</p>
+    <script>
+        
+        var m = prompt("enter le nombre de moi : ");
+        var anne = prompt("enter l'anne : ")
+        var jour ;
+
+        function isLeapYear(year) {
+            if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        switch (+m) {
+            case 1 , 3 , 5 , 7, 8 ,10,12:
+                jour = 31
+                break;
+            case 4,6,9,11 :
+                jour = 30;
+                break;
+            case 2 :
+                if(isLeapYear(anne)){
+                    jour = 29;
+                }
+                else{
+                    jour = 28;
+                } 
+                break;
+            default:
+                jour = 0;
+        }
+        if(jour === 0){
+            alert("imposible de fenir le nombre des jour")
+        }
+        else{
+            alert(`Le mois contient ${jour} `);
+        }
+            
+
+
+
+    </script>
+</body>
+</html>

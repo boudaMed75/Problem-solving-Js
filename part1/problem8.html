@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 8</title>
+</head>
+<body>
+    <p><pre>Ecrire un programme qui affiche la plus grande de 5 valeurs.
+        Exp :
+        A=1
+        B=2
+        C=3
+        D=4
+        E=5
+        Le max est E.</pre></p>
+        <script>
+            const A=1,B=2,C=3,D=4,E=5;
+            var number = [A,B,C,D,E];
+            let i = 1, max = number[0];
+            while(i<number.length){
+                if(max<number[i]){
+                    max = number[i];
+                }
+                // max = max + number[i];
+                i++;
+            }
+            console.log(i);
+        </script>
+</body>
+</html>

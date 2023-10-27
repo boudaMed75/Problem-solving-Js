@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 5-1</title>
+</head>
+<body>
+    <p>. Créer un script qui demande à l’utilisateur de saisir trois variables numériques via une boite
+        prompt. L’utilisateur est averti s’il ne saisit pas un nombre, et le script lui demande de saisir
+        une valeur numérique. Une fois que l’utilisateur saisit trois valeurs numériques, le script
+        teste les trois variables :
+        </p>
+    <ul>
+        <li>Si elles sont égaux, écrire : "Les trois variables sont identiques."</li>
+        <li>Si seulement deux sont identiques, écrire :« Deux des variables sont de valeurs égales."</li>
+        <li>Sinon, écrire :"Les trois variables sont différentes</li>
+    </ul>
+    <script>
+        
+        var n1 = prompt("enter un nombre entier n1: ")
+    
+    
+        var n2 = prompt("enter un nombre entier n2 : ")
+    
+
+        var n3 = prompt("enter un nombre entier n3 : ")
+        if(!isNaN(n1) && !isNaN(n2) && !isNaN(n3)){
+            if(n1==n2 || n1==n3 || n2==n3){
+                if(n1===n2 && n1===n3 && n2==n3 ){
+                    alert("Les trois variables sont identiques.");
+                }
+                else{
+                    alert("Deux des variables sont de valeurs égales");
+                } 
+            }
+            else{
+                alert("Les trois variables sont différentes");
+            }
+        }
+        else{
+            alert("Un des nombre non entier");
+        }
+
+
+    </script>
+</body>
+</html>

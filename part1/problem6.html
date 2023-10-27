@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 6</title>
+</head>
+<body>
+    <p><pre>Écrivez un programme qui demande à l’utilisateur de taper trois chiffres. Chaque chiffre est 
+        affecté à une variable.
+        Changer la valeur des trois variables. Exemple : A=5, B=6 et C=3 de telle façon que A aura la 
+        valeur 6 et 
+        B aura la valeur 3 et C la valeur de 5. Sans ajouter une quatrième variable ni une fonction 
+        prédéfini.</pre></p>
+    <script>
+        var A=5,B=6,C=3;
+        
+        A = A + B
+        B = A - B
+        A = A - B
+
+        B = B + C
+        C = B - C
+        B = B - C
+        
+        document.write(`La valeur de A ${A}`);
+        document.write("<br>");
+        document.write(`La valeur de B ${B}`);
+        document.write("<br>");
+        document.write(`La valeur de C ${C}`);
+    </script>
+</body>
+</html>

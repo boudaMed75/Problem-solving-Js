@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 7</title>
+</head>
+<body>
+    <p>Écrivez un programme qui convertit un nombre entier de secondes fourni au départ en un 
+        nombre d’heures, de minutes et de secondes (utilisez l’opérateur modulo : %). Exp : s=5200</p>
+    <script>
+        s = prompt("Entrez un nombre de secondes : ")
+        
+        heures = Math.floor(s / 3600)
+        minutes = Math.floor((s % 3600) / 60 )
+        secondes = s % 60
+
+        document.write(`${s} secondes équivalent à ${heures} heures, ${minutes} minutes et ${secondes} secondes.`)
+    </script>
+</body>
+</html>
