@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 1</title>
+</head>
+<body>
+    <p>
+        <pre>
+            Ecrire le code d'un document HTML, intitulé Calcul, contenant une zone de saisie qui permet
+            d'entrer une opération à calculer, un bouton (=) pour afficher le résultat et une zone de
+            réponse.
+            Ajouter un lien hyper texte permettant d’afficher le résultat.
+        </pre>
+    </p>
+    <input id="expression" type="text">
+    <button>=</button>
+    <input id="res" type="text">
+    <script>
+        const expres = document.getElementById("expression"),
+        res = document.getElementById("res");
+        expres.onkeyup = ()=>{
+            res.value = eval(expres.value);
+        }
+    </script>
+</body>
+</html>
