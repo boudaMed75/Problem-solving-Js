@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 2</title>
+</head>
+<body>
+    <p>
+        <pre>
+            • En utilisant la gestion des exceptions, écrire un programme JavaScript qui permet d'afficher le
+            message "Note hors intervalle" si l'utilisateur saisie une note supérieure 20 ou inférieure à 0.
+        </pre>
+    </p>
+    <script>
+        try{
+            var n = Number(prompt("entrer un nombre entier : "));
+            if (n < 0 || n > 20) {
+                throw new Error("Note hors intervalle");
+            }
+            document.write("Note dans l'intervalle");
+        }
+        catch(err){
+            document.write(err.message);
+        }
+    </script>
+</body>
+</html>
