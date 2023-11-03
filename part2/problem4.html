@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 4</title>
+    <style>
+        .styled-table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px; 
+            margin: 0 auto; 
+        }
+        .styled-table th {
+            background-color: #f2f2f2;
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .styled-table td {
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .styled-table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+    </style>
+</head>
+<body>
+    <p>
+        <pre>
+            Ecrivez un programme JS qui prend en paramètre un nombre dans un intervalle [1,100], et
+            retourne la moitié des chiffres du nouveau intervalle [1, nombre] d’une façon aléatoire.
+        </pre>
+    </p>
+    <table class="styled-table">
+            <thead>
+                <tr>
+                    <th colspan="2">Exam en 9h</th>
+                </tr>
+                <tr>
+                    <th>poste</th>
+                    <th>Num etudiant</th>
+                </tr>
+            </thead>
+            <tbody class="affichage1">
+                
+            </tbody>
+        </table>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th colspan="2">Exam en 10h</th>
+                </tr>
+                <tr>
+                    <th>poste</th>
+                    <th>Num etudiant</th>
+                </tr>
+
+            </thead>
+            <tbody class="affichage2">
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    <script>
+        const aff_table1 = document.querySelector(".affichage1"),
+        aff_table2 = document.querySelector(".affichage2");
+        
+        function moitieDesChiffresAleatoires(nombre) {
+            if (nombre < 1 || nombre > 100) {
+                return "Le nombre doit être dans l'intervalle [1, 100].";
+            }
+
+            const moitieDesNombres = [];
+            const maxNombres = nombre / 2;
+
+            while (moitieDesNombres.length < maxNombres) {
+                const chiffreAleatoire = Math.floor(Math.random() * nombre) + 1;
+                if (!moitieDesNombres.includes(chiffreAleatoire)) {
+                    moitieDesNombres.push(chiffreAleatoire);
+                }
+            }
+
+            return moitieDesNombres;
+        }
+        function melangerTableau(tableau) {
+            
+            const tableauMelange = tableau.slice();
+            for (let i = tableauMelange.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [tableauMelange[i], tableauMelange[j]] = [tableauMelange[j], tableauMelange[i]];
+            }
+            return tableauMelange;
+        }
+
+
+
+        var nombre = Number(prompt("entrer un Entier : "))
+        const resultat = moitieDesChiffresAleatoires(nombre);
+        let group2 = []
+        for (let i=1;i<=nombre;i++){
+            if (!resultat.includes(i)){
+                group2.push(i);
+            }
+        }
+        let aff1 = "";
+        let aff2 = "";
+        resultat.forEach((e,index)=>{
+            aff1 += `
+                <tr>
+                    <td>${index+1}</td>
+                    <td>${e}</td>
+                </tr>
+            `;
+        })
+        
+        melangerTableau(group2).forEach((e,index)=>{
+            aff2 += `
+                <tr>
+                    <td>${index+1}</td>
+                    <td>${e}</td>
+                </tr>
+            `;
+        })
+        aff_table1.innerHTML = aff1;
+        aff_table2.innerHTML = aff2;
+        
+
+    </script>
+   
+        
+    
+</body>
+</html>
