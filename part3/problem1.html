@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 1</title>
+</head>
+<body>
+    <p>
+        <pre>
+            Vous pouvez trier le tableau en déplaçant les nombres pairs vers l'avant du tableau tout en maintenant l'ordre relatif des nombres impairs.
+             Voici une fonction en JavaScript qui fait cela :
+        </pre>
+    </p>
+    <script>
+        function trierPairsAvantImpairs(arr) {
+            let indexPairs = 0;
+            
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] % 2 === 0) {
+                
+                const temp = arr[i];
+                arr[i] = arr[indexPairs];
+                arr[indexPairs] = temp;
+                indexPairs++;
+                }
+            }
+            
+            return arr;
+        }
+
+        const tableau = [1, 2, 3, 4, 5, 6, 7, 8, 9,12,100,101];
+        const resultat = trierPairsAvantImpairs(tableau);
+        
+        resultat.forEach(element => {
+            document.write(`${element}  `);
+        });
+
+    </script>
+</body>
+</html>
