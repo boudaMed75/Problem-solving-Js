@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const joursDansLesMois = [
+                31, // Janvier
+                28, // Février (non bissextile)
+                29, // Février (bissextile)
+                31, // Mars
+                30, // Avril
+                31, // Mai
+                30, // Juin
+                31, // Juillet
+                31, // Août
+                30, // Septembre
+                31, // Octobre
+                30, // Novembre
+                31  // Décembre
+                ];
+                const moisDeLAnnee = [
+                "Janvier",
+                "Février",
+                "Mars",
+                "Avril",
+                "Mai",
+                "Juin",
+                "Juillet",
+                "Août",
+                "Septembre",
+                "Octobre",
+                "Novembre",
+                "Décembre"
+                ];
+                const joursDeLaSemaine = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+
+                let i=0,day = 0;
+                while (i<moisDeLAnnee.length) {
+                    for (let j = 1; j <= joursDansLesMois[i]; j++) {
+                        document.write(`${joursDeLaSemaine[day]} ${j} ${moisDeLAnnee[i]}`)
+                        document.write("<br>");
+                        if(day==6){
+                            day = -1;
+                        }
+                        day ++;
+                        
+                    }
+                    i++;
+                    
+                }
+
+
+
+
+
+    </script>
+</body>
+</html>
